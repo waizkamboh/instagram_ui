@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_ui/bottomnavigation_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -18,12 +19,14 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             children: [
               instagram(),
-              storiesText()
+              storiesText(),
 
             ],
           ),
         ),
       ),
+      // For Bottom navigation Bar
+      bottomNavigationBar: MyBottomNavigationBar(),
     );
   }
 
