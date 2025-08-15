@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../model/items_model.dart';
+import '../../model/items_model.dart';
 
 class Story extends StatelessWidget {
   const Story({
@@ -11,11 +11,11 @@ class Story extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Stack(
+        Stack(
           children: [
             CircleAvatar(
               radius: 38,
-              backgroundImage: AssetImage("assets/images/g.jpg"),
+              backgroundImage: AssetImage("assets/images/my_pic.jpg"),
             ),
             Padding(
               padding: EdgeInsets.only(left: 54, top: 55),
@@ -42,7 +42,7 @@ class Story extends StatelessWidget {
                 style: TextStyle(
                     fontWeight: FontWeight.bold, color: Colors.black26),
               ),
-            )
+            ),
           ],
         ),
         const SizedBox(
@@ -50,7 +50,7 @@ class Story extends StatelessWidget {
         ),
         Expanded(
             child: SizedBox(
-              height: 100,
+              height: 102,
               child: ListView.builder(
                   shrinkWrap: true,
                   itemCount: userItems.length,

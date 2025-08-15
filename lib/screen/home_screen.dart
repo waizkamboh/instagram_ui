@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_ui/bottomnavigation_bar.dart';
+import 'package:instagram_ui/screen/bottomnavigation_bar.dart';
+import 'package:instagram_ui/screen/story_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -20,7 +21,8 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               instagram(),
               storiesText(),
-
+              SizedBox(height: 15,),
+              Story(),
             ],
           ),
         ),
