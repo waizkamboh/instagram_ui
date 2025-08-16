@@ -114,15 +114,9 @@ class Posts extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(
-                    height: 5,
+                    height: 15,
                   ),
-                  Container(
-                    height: 1,
-                    color: Colors.grey,
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
+
                 ],
               );
             }));

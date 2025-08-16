@@ -27,7 +27,7 @@ class UserDetail {
 List<UserDetail> userItems = [
   UserDetail(
       id: '1',
-      image: "assets/images/c.jpg",
+      image: "assets/images/c.jpeg",
       name: 'Alise Smith',
       post: 25,
       username: "alisesmith",
@@ -38,7 +38,7 @@ List<UserDetail> userItems = [
       address: 'Fashion-Designer, London UK'),
   UserDetail(
       id: '2',
-      image: "assets/images/a.jpg",
+      image: "assets/images/a.jpeg",
       name: 'Westly Windler',
       username: "westly.windler",
       post: 245,
@@ -49,7 +49,7 @@ List<UserDetail> userItems = [
       address: 'Designer,US'),
   UserDetail(
       id: '3',
-      image: "assets/images/b.jpg",
+      image: "assets/images/d.jpeg",
       name: 'Li Maxwell',
       post: 245,
       username: "li-maxwell",
@@ -60,7 +60,7 @@ List<UserDetail> userItems = [
       address: 'Programmer,Nepal'),
   UserDetail(
       id: '4',
-      image: "assets/images/d.jpg",
+      image: "assets/images/g.jpg",
       name: 'Mis Beauty',
       post: 245,
       username: "mis_beauty",
