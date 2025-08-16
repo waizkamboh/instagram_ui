@@ -70,13 +70,7 @@ class PostScreen extends StatelessWidget {
 
                     ],
                   ),
-                  SizedBox(height: 5,),
-                  Container(
-                    height: 1,
-                    color: Colors.grey,
-
-                  ),
-                  SizedBox(height: 10,),
+                  SizedBox(height: 15,),
 
 
 

@@ -26,13 +26,8 @@ class _HomeScreenState extends State<HomeScreen> {
               storiesText(),
               SizedBox(height: 15,),
               Story(),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10),
-                child: Container(
-                  color: Colors.grey,
-                  height: 1,
-                ),
-              ),
+              SizedBox(height: 15,),
+
               //Post
               PostScreen(),
 
