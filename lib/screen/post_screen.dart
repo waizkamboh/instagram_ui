@@ -1,10 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:instagram_ui/Screen/user_profile.dart';
 
 import '../model/items_model.dart';
 
-class PostScreen extends StatelessWidget {
-  const PostScreen({
+class Posts extends StatelessWidget {
+  const Posts({
     super.key,
   });
 
@@ -21,59 +21,108 @@ class PostScreen extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      CircleAvatar(
-                        radius: 20,
-                        backgroundImage: AssetImage(user.image),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => UserProfile(
+                                    user: user,
+                                  )));
+                        },
+                        child: CircleAvatar(
+                          radius: 20,
+                          backgroundImage: AssetImage(user.image),
+                        ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 5,
                       ),
-                      Text(
-                        user.username,
-                        style: const TextStyle(fontWeight: FontWeight.bold),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => UserProfile(
+                                    user: user,
+                                  )));
+                        },
+                        child: Text(
+                          user.username,
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
                       ),
-                      Spacer(),
-                      Icon(Icons.more_horiz)
-                    ],),
+                      const Spacer(),
+                      const Icon(Icons.more_horiz)
+                    ],
+                  ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 10),
                     child: Container(
                       height: 300,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          image: DecorationImage(image: AssetImage(user.image),fit: BoxFit.fill)
-                      ),
+                          image: DecorationImage(
+                              image: AssetImage(
+                                user.image,
+                              ),
+                              fit: BoxFit.fill)),
                     ),
                   ),
                   Row(
                     children: [
-                      Icon(Icons.favorite_border),
-                      SizedBox(
+                      const Icon(
+                        Icons.favorite_border,
+                      ),
+                      const SizedBox(
                         width: 5,
                       ),
-                      Image.asset("assets/images/comments.png",height: 30,width: 30,),
-                      SizedBox(
+                      Image.asset(
+                        "assets/images/comments.png",
+                        height: 30,
+                        width: 30,
+                      ),
+                      const SizedBox(
                         width: 5,
                       ),
-                      Image.asset("assets/images/send.png",height: 30,width: 30,),
-                      Spacer(),
-                      Icon(Icons.bookmark_border_sharp)
-
+                      Image.asset(
+                        "assets/images/send.png",
+                        height: 30,
+                        width: 25,
+                      ),
+                      const Spacer(),
+                      const Icon(Icons.bookmark_border_sharp)
                     ],
                   ),
-                  Text("${user.likes.toString()} Likes",style: TextStyle(fontWeight: FontWeight.w500),),
+                  Text(
+                    "${user.likes.toString()} Likes",
+                    style: const TextStyle(fontWeight: FontWeight.w500),
+                  ),
                   Row(
                     children: [
-                      Text(user.comment,style: TextStyle(fontWeight: FontWeight.w500),),
-                      SizedBox(width: 5,),
-                      Text("#favorite",style: TextStyle(fontWeight: FontWeight.w500),),
-
+                      Text(
+                        user.comment,
+                        style: const TextStyle(fontWeight: FontWeight.w500),
+                      ),
+                      const SizedBox(
+                        width: 5,
+                      ),
+                      const Text(
+                        "#favorite",
+                        style: TextStyle(fontWeight: FontWeight.w500),
+                      ),
                     ],
                   ),
-                  SizedBox(height: 15,),
-
-
-
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                    height: 1,
+                    color: Colors.grey,
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
                 ],
               );
             }));
