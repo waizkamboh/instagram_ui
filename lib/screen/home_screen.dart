@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_ui/screen/bottomnavigation_bar.dart';
+import 'package:instagram_ui/screen/post_screen.dart';
 import 'package:instagram_ui/screen/story_screen.dart';
+
+import '../model/items_model.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -23,6 +26,16 @@ class _HomeScreenState extends State<HomeScreen> {
               storiesText(),
               SizedBox(height: 15,),
               Story(),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                child: Container(
+                  color: Colors.grey,
+                  height: 1,
+                ),
+              ),
+              //Post
+              PostScreen(),
+
             ],
           ),
         ),
@@ -56,3 +69,4 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
